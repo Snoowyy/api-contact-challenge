@@ -50,7 +50,7 @@ For run the tests you can use the [Dev-Container], when you are open the contain
 pip install -r requirements.txt
 ```
 
-Before run
+After this execute the next command
 
 ```
 python manage.py test
