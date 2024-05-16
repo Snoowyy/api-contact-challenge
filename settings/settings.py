@@ -30,7 +30,7 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "ALGORITHM": "HS256",
 }
-ALLOWED_HOSTS = ['192.168.20.145']
+ALLOWED_HOSTS = ['192.168.20.145', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -99,6 +99,9 @@ DATABASES = {
     }
 }
 
+import sys
+if 'test' in sys.argv or 'test_coverage' in sys.argv: #Covers regular testing and django-coverage
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

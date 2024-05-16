@@ -22,6 +22,8 @@ The database is configured with [SUPABASE] service, which provides us with a Pos
 
 # Run the project
 
+First add your computer IP into the `ALLOWED_HOSTS` in the `settings.py` file
+
 If you need only run the API for test and not for development you can use the next command
 
 ```
