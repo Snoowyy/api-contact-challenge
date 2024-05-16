@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  djangoapp:
+    container_name: djangoapp
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_USER=postgres.uvldxnsupxkpwzeaeihh
+      - DB_PASSWORD=31Evu7yB!Q=[
+      - DB_NAME=postgres
+      - DB_PORT=5432
+      - DB_HOST=aws-0-us-east-1.pooler.supabase.com
+
+volumes:
+  pgdata: {}
